@@ -3,9 +3,9 @@ title: "My First Document"
 author: "David Piekarski"
 date: "11/30/2018"
 output:
-  word_document: default
-  html_document: default
   pdf_document: default
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -60,9 +60,24 @@ summary(cars)
 ## Including Plots
 
 You can also embed plots, for example:
-##
+
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r pressure 2, fig.height=5, fig.width=5, include=FALSE}
+plot(pressure)
+```
+
+
+##Insert Tables
+```{r}
+knitr::kable(head(cars),
+             caption = "Head of cars dataset")
+```
+
+##Insert an Equation using latex (identified with $$)
+$$ Y = \beta_0 + \beta_1x $$
+
