@@ -3,9 +3,9 @@ title: "My First Document"
 author: "David Piekarski"
 date: "11/30/2018"
 output:
+  word_document: default
   pdf_document: default
   html_document: default
-  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -72,6 +72,7 @@ plot(pressure)
 ```
 
 
+
 ##Insert Tables
 ```{r}
 knitr::kable(head(cars),
@@ -79,5 +80,31 @@ knitr::kable(head(cars),
 ```
 
 ##Insert an Equation using latex (identified with $$)
+
 $$ Y = \beta_0 + \beta_1x $$
+
+
+
+##Insert Images
+__you can bring in external pictures and files, just have them stored in the same location as the markdown file__
+
+![Mountains](scape.jpg)
+
+##Footnotes:
+You can provide footnotes using either inline methods (where you write teh footnotes near its location) or you can add a marker and then provide footnote text at the end of the document.
+
+__insert text with footnotes__
+
+Here is a footnote: [^] and another [^longnote]
+
+This is an inline footnote^[inline notes are a bit easier because you don't have to pick an identifier and move down to type the note]
+
+[^1]:  Here is a footnote
+[^longnote]: Here's one with multiple blocks, formula: 
+$$Y = \beta_0 + \beta_1x$$
+
+
+
+
+
 
