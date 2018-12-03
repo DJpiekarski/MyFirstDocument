@@ -5,18 +5,54 @@ date: "11/30/2018"
 output:
   word_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+#CheatSheet
+Number of hashtages representes the level of teh ehader, thus, fewer hashtags means larger font
+
+#Level One Header
 ## R Markdown
+###Level Three Header
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+##Links
+Here is a link to [Google](http://www.google.com): Names in square brackets followed by link in parentheses.
+You can also include the raw link by putting it between "<>" resulting in, <http://www.google.com>
 
+##Emphasis
+*Italics* are created by bookending a word in asterisks while **Bolds** are created by bookending a word in double asterisks.  Alternately, you can use _single_ or __double underscores__ 
+
+
+
+
+If you want to show r code, without running it, put code between three backticks
+```
+2 + 2 =4
+ggplot(data, aes(x=x, y=y)) + geom_point()
+```
+
+__Non numbered list__: each indent must be four spaces for markdown to recognize that it is a list
+
+* Breakfast
+    - food
+        + eggs
+        + rice
+        + toast
+
+
+####Format Quotes
+> this is a block quote, started with a greater than symbol
+>
+> > you can also nest a blockquote
+> if you add five spaces after greater than, you can nest code 
+
+>     2 + 2
+####The below text is actual r code  that has been run
 ```{r cars}
 summary(cars)
 ```
@@ -24,7 +60,7 @@ summary(cars)
 ## Including Plots
 
 You can also embed plots, for example:
-
+##
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
